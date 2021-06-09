@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container-principal">
+      <form action="" class="form-register">
+        <div class="form-register__header">
+          <ul class="progressbar">
+            <li class="progressbar__option active">paso 1</li>
+            <li class="progressbar__option">paso 2</li>
+            <li class="progressbar__option">paso 3</li>
+          </ul>
+          <h1 class="form-register__title">Registrate</h1>
+        </div>
+        <div class="form-register__body">
+          <div class="step active" id="step-1">
+            <div class="step__header">
+              <h2 class="step__title">
+                Informacion Personal<span>(Paso 1)</span>
+              </h2>
+            </div>
+            <div class="step__body">
+              <input type="text" placeholder="Nombre" class="step__input" />
+              <input type="text" placeholder="Apellido" class="step__input" />
+              <div class="info-personal">
+                <div class="info-personal__1">
+                  <p class="text-form">Genero:</p>
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label class="text-form" for="male">Male</label><br />
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label class="text-form" for="female">Female</label><br />
+                  <input type="radio" id="other" name="gender" value="other" / >
+                  <label class="text-form" for="other">Other</label>
+                </div>
+                <div class="info-personal__2">
+                  <label  class="text-form" for="birthday"
+                    >Fecha de Nacimiento:</label
+                  >
+                  <input 
+                    class="step__input color"
+                    type="date"
+                    id="birthday"
+                    name="birthday"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="step__footer">
+              <button
+                type="button"
+                class="step__button step__button--next"
+                data-to_step="2"
+                data-step="1"
+              >
+                Siguiente
+              </button>
+            </div>
+          </div>
+          <div class="step" id="step-2">
+            <div class="step__header">
+              <h2 class="step__title">
+                Informacion Adicional <span>(Paso 2)</span>
+              </h2>
+            </div>
+            <div class="step__body">
+                <input
+                type="tel"
+                placeholder="Telefono"
+                class="step__input"
+              />
+              <input
+                type="tel"
+                placeholder="Direccion"
+                class="step__input"
+              />
+              <div class="info-adicional">
+                <div class="info-adicional__1">
+                 
+                  <label class="text-form"> Preferencias:</label><br />
+                  <input
+                    type="checkbox"
+                    id="preferencias1"
+                    name="intereses1"
+                    value="Peliculas"
+                  />
+                  <label class="text-form" for="preferencias1"> Peliculas</label><br />
+                  <input
+                    type="checkbox"
+                    id="preferencias2"
+                    name="preferencias2"
+                    value="Libros"
+                  />
+                  <label class="text-form" for="preferencias2"> Libros</label><br />
+                  <input
+                    type="checkbox"
+                    id="preferencias3"
+                    name="preferencias3"
+                    value="Internet"
+                  />
+                  <label class="text-form" for="preferencias3"> Internet</label>
+                </div>
+                <div class="info-adicional__2">
+                  <label class="text-form" for="estado">Estado Civil:</label>
+                  <select name="estado" id="estado" class="color">
+                    <option value="Soltero">Soltero</option>
+                    <option value="Conviviente">Conviviente</option>
+                    <option value="Casado">Casado</option>
+                    <option value="Viudo">Viudo</option>
+                    <option value="otros">Otros</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="step__footer">
+              <button
+                type="button"
+                class="step__button step__button--back"
+                data-to_step="1"
+                data-step="2"
+              >
+                Regresar
+              </button>
+              <button
+                type="button"
+                class="step__button step__button--next"
+                data-to_step="3"
+                data-step="2"
+              >
+                Siguiente
+              </button>
+            </div>
+          </div>
+          <div class="step" id="step-3">
+            <div class="step__header">
+              <h2 class="step__title">
+                Informacion de la cuenta <span>(Paso 3)</span>
+              </h2>
+            </div>
+            <div class="step__body">
+              <input type="email" placeholder="Correo" class="step__input" />
+              <input
+                type="password"
+                placeholder="Contraseña"
+                class="step__input"
+              />
+              <input
+                type="password"
+                placeholder="Confirmar Contraseña"
+                class="step__input"
+              />
+            </div>
+            <div class="step__footer">
+              <button
+                type="button"
+                class="step__button step__button--back"
+                data-to_step="2"
+                data-step="3"
+              >
+                Regresar
+              </button>
+              <button type="submit" class="step__button">Finalizar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
