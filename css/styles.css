@@ -19,7 +19,7 @@
 }
 
 .container-principal {
-  background-image: url('img/pattern.png');
+ background-image: url('img/pattern.png');
   background-repeat: repeat;
   display: flex;
   justify-content: center;
